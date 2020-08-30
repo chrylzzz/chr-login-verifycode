@@ -2,7 +2,9 @@ package com.chryl.controller;
 
 
 import com.chryl.config.VerificationCode;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,6 +18,7 @@ import java.io.IOException;
  * 登录测试
  */
 @RestController
+//@Controller
 public class LoginController {
 
     //返回 验证码img
@@ -31,6 +34,7 @@ public class LoginController {
 
 
     //校验code
+    @PostMapping("/checkCode")
     public void checkCode(HttpServletRequest request, HttpServletResponse resp, String code) {
         //session 获取
         String verify_code = (String) request.getSession().getAttribute("verify_code");
@@ -40,6 +44,7 @@ public class LoginController {
             //验证码不正确
             throw new RuntimeException("验证码不正确");
         }
+        System.out.println("验证码正确");
     }
 
 
