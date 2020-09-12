@@ -19,13 +19,14 @@ import java.io.ByteArrayOutputStream;
  */
 @Slf4j
 @RestController
-@RequestMapping("smart")
+@RequestMapping("/smart")
 public class VolidateController {
+
     @Autowired
     private DefaultKaptcha defaultKaptcha;
 
     @GetMapping("/admin")
-    public void show() {
+    public String show() {
 
         String kaptchaText = defaultKaptcha.createText();
 
@@ -48,5 +49,6 @@ public class VolidateController {
                 }
             }
         }
+        return "data:image/png;base64," + base64Code;
     }
 }

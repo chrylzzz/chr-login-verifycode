@@ -1,4 +1,4 @@
-package com.chryl.config;
+package com.chryl.chryladmin.config;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

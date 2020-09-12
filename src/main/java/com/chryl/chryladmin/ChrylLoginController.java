@@ -1,8 +1,7 @@
-package com.chryl.controller;
+package com.chryl.chryladmin;
 
 
-import com.chryl.config.VerificationCode;
-import org.springframework.stereotype.Controller;
+import com.chryl.chryladmin.config.VerificationCode;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +18,7 @@ import java.io.IOException;
  */
 @RestController
 //@Controller
-public class LoginController {
+public class ChrylLoginController {
 
     //返回 验证码img
     @GetMapping("/verifyCode")
