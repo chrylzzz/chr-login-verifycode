@@ -18,7 +18,7 @@
 		<java.version>1.8</java.version>
 
 		<kaptcha.version>2.3.2</kaptcha.version>
-		<guava.version>28.2-jre</guava.version>
+		<guava.version>29.0-jre</guava.version>
 
 	</properties>
 
